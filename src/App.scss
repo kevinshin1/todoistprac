@@ -214,8 +214,8 @@ header {
     height: calc(100vh);
     padding-top: 74px;
     position: fixed;
-    overlay-x: hidden;
-    overlay-y: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
     border-right: $generic-border;
     background-color: #fafafa;
 
