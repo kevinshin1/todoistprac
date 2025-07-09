@@ -74,9 +74,9 @@ export const AddTask = ({
                                         className="add-task__cancel-x"
                                         data-testid="add-task-quick-cancel"
                                         onClick={() => {
-                                            setShowMain(false); 
-                                            setShowProjectOverlay(false); 
-                                            setShowQuickAddTask(false)
+                                            setShowMain(false);
+                                            setShowProjectOverlay(false);
+                                            setShowQuickAddTask(false);
                                         }}
                                     >
                                         X
@@ -105,7 +105,7 @@ export const AddTask = ({
                             type="button"
                             className="add-task__submit"
                             data-testid="add-task"
-                            onClick={() => addTask()}
+                            onClick={() => (showQuickAddTask ? addTask() && setShowQuickAddTask(false) : addTask())}
                         >
                             Add Task
                         </button>

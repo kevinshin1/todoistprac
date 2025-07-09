@@ -396,7 +396,7 @@ header {
         }
 
         button {
-            @include btn(50px);
+            @include btn('50px');
         }
         span {
             @include cancel();
@@ -554,7 +554,7 @@ header {
     }
 
     &__submit {
-        @include btn(90px);
+        @include btn('90px');
     }
 }
 
@@ -633,7 +633,7 @@ header {
     }
 
     &__submit {
-        @include btn(100px);
+        @include btn('100px');
     }
 
     &__cancel {
