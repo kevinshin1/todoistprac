@@ -14,16 +14,21 @@ export const Projects = ({ activeValue = null }) => {
                 data-doc-id={project.docId}
                 data-testid="project-action"
                 className={active === project.projectId ? 'active sidebar__project' : 'sidebar__project'}
-                onKeyDown={() => {
-                    setActive(project.projectId);
-                    setSelectedProject(project.projectId);
-                }}
-                onClick={() => {
-                    setActive(project.projectId);
-                    setSelectedProject(project.projectId);
-                }}
+                
             >
-                <IndividualProject project={project} />
+                <div 
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={() => {
+                        setActive(project.projectId);
+                        setSelectedProject(project.projectId);
+                    }}
+                    onClick={() => {
+                        setActive(project.projectId);
+                        setSelectedProject(project.projectId);
+                    }}>
+                    <IndividualProject project={project} />
+                </div>
             </li>
         ))
     )

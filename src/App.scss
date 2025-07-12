@@ -87,6 +87,11 @@ $generic-bg: #db4c3f;
     margin: 2px 5px;
 }
 
+@mixin transparent-button() {
+    background-color: transparent;
+    border: 0;
+}
+
 @mixin task-item() {
   list-style-type: none;
   display: flex;
@@ -221,11 +226,26 @@ header {
                         &.settings__add {
                             margin-right: 15px;
                             font-size: 30px;
+
+                            button {
+                                @include transparent-button();
+                                color: white;
+                                cursor: pointer;
+                            }
                         }
 
-                        &.settings__darkmode svg{
-                            width: 20px;
-                            height: 20px;
+                        &.settings__darkmode {
+                            button {
+                                @include transparent-button();
+                                color: white;
+                                cursor: pointer;
+                                display: flex;
+                                
+                                svg {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                            }
                         }
                     }
                 }
@@ -254,9 +274,10 @@ header {
     }
 
     li {
+        padding-left: 10px;
+        padding-right: 15px;
+
         &:hover .sidebar__project-delete {
-            display: -webkit -box;
-            display: -ms-flexbox;
             display: flex;
         }
     }
@@ -264,6 +285,12 @@ header {
     &__project {
         padding: 5px 0;
         cursor: pointer;
+
+        div:nth-child(1) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
 
         &-delete {
             margin-left: auto;
