@@ -12,12 +12,26 @@ export const Tasks = () => {
     const { tasks } = useTasks(selectedProject);
 
     let projectName = '';
-
-    if (projects && selectedProject && !collatedTasksExist(selectedProject)) {
-        projectName = getTitle(projects, selectedProject).name;
+/*
+    if (selectedProject && collatedTasksExist(selectedProject)) {
+        projectName = getCollatedTitle(projects, selectedProject).name;
     }
 
-    if (projects.length > 0 && !collatedTasksExist(selectedProject) && selectedProject) {
+    if (projects.length > 0 && selectedProject && !collatedTasksExist(selectedProject)) {
+        projectName = getTitle(projects, selectedProject).name;
+    }
+*/
+
+    if (collatedTasksExist(selectedProject) && selectedProject) {
+        projectName = getCollatedTitle(collatedTasks, selectedProject).name;
+    }
+
+    if (
+        projects &&
+        projects.length > 0 &&
+        selectedProject &&
+        !collatedTasksExist(selectedProject)
+    ) {
         projectName = getTitle(projects, selectedProject).name;
     }
 
