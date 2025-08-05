@@ -12,7 +12,7 @@ describe('<App />', () => {
     });
 
     it('renders the application using dark mode', () => {
-        const { queryByTestId, debug } = render(<App darkModeDefault />);
+        const { queryByTestId } = render(<App darkModeDefault />);
         expect(queryByTestId('application')).toBeTruthy();
         expect(queryByTestId('application').classList.contains('darkmode')).toBeTruthy();
     });

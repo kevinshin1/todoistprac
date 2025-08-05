@@ -5,7 +5,7 @@ import moment from 'moment';
 export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) => showTaskDate && (
     <div className="task-date" data-testid="task-date-overlay">
         <ul className="task-date__list">
-            <li data-testid="task-date-overlay">
+            <li>
                 <div
                     onClick={() => {
                         setShowTaskDate(false);
@@ -17,6 +17,7 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) => show
                         setTaskDate(moment().format('MM/DD/YYYY'));
                         }
                     }}
+                    data-testid="task-date-today"
                     role="button"
                     tabIndex={0}
                     aria-label="Select today as the task date"

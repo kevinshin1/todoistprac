@@ -7,8 +7,8 @@ beforeEach(cleanup); // Clean up the DOM after each test
 jest.mock("../firebase", () => ({
     firebase: {
         firestore: () => ({
-                collection: jest.fn(() => ({
-                    doc: jest.fn(() => ({
+            collection: jest.fn(() => ({
+                doc: jest.fn(() => ({
                     update: jest.fn(),
                 })),
             })),
