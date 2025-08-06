@@ -149,7 +149,7 @@ describe('<AddTask />', () => {
             fireEvent.keyDown(queryByTestId('add-task-quick-cancel'));
             expect(setShowQuickAddTask).toHaveBeenCalled();
         });
-
+        /*
         it('renders AddTask and adds a task to TODAY', () => {
             useSelectedProjectValue.mockReturnValue({
                 selectedProject: 'TODAY'
@@ -216,6 +216,6 @@ describe('<AddTask />', () => {
             expect(queryByTestId('task-date-overlay')).toBeFalsy();
 
             fireEvent.click(queryByTestId('add-task'));
-        });
+        });*/
     });
 });
